@@ -11,10 +11,7 @@ import { Athlete } from './athlete.model'
 export class AthleteListComponent implements OnInit {
   athleteList: Athlete[] = []
 
-  constructor (
-    private athletelistService: AthleteListService,
-    private http: HttpClient
-  ) {}
+  constructor (private athletelistService: AthleteListService) {}
 
   ngOnInit (): void {
     this.athleteList = this.athletelistService.getAthletes()

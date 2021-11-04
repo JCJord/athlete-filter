@@ -1,11 +1,38 @@
 <div class="container">
-  <p>athlete-list works!</p>
-  <button type="button" class="btn btn-warning">Warning</button>
+  <h1>Lista de atletas brasileiros</h1>
+
   <ul class="list-group mt-5" *ngFor="let i of athleteList">
-    <li class="list-group-item">{{ i.age }}</li>
-    <li class="list-group-item">{{ i.athlete }}</li>
-    <li class="list-group-item">{{ i.sport }}</li>
-    <li class="list-group-item">Porta ac consectetur ac</li>
-    <li class="list-group-item">Vestibulum at eros</li>
+    <li class="list-group-item">
+      <h4>Atleta:</h4>
+      {{ i.athlete }}
+    </li>
+    <li class="list-group-item">
+      <h4>Idade:</h4>
+      {{ i.age }}
+    </li>
+    <li class="list-group-item">
+      <h4>Esporte:</h4>
+      {{ i.sport }}
+    </li>
+    <li class="list-group-item">
+      <h4>País:</h4>
+      {{ i.country }}
+    </li>
+    <li class="list-group-item">
+      <h4>Ano:</h4>
+      {{ i.year }}
+    </li>
+    <li class="list-group-item">
+      <h4>Data:</h4>
+      {{ i.date }}
+    </li>
+    <li class="list-group-item">
+      <h4>Medalhas:</h4>
+      <b style="color: rgb(201, 171, 0)"> Ouro:</b> {{ i.gold }} <br />
+      <b style="color: rgb(116, 116, 116)">Prata:</b> {{ i.silver }} <br />
+      <b style="color: #cd7f32">Bronze:</b> {{ i.bronze }}
+      <br />
+      <b style="color: #000000">Total:</b> {{ i.total }}
+    </li>
   </ul>
 </div>
