@@ -1,4 +1,11 @@
 <div class="container">
   <p>athlete-list works!</p>
   <button type="button" class="btn btn-warning">Warning</button>
+  <ul class="list-group mt-5" *ngFor="let i of athleteList">
+    <li class="list-group-item">{{ i.age }}</li>
+    <li class="list-group-item">{{ i.athlete }}</li>
+    <li class="list-group-item">{{ i.sport }}</li>
+    <li class="list-group-item">Porta ac consectetur ac</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
 </div>
