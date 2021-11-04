@@ -16,13 +16,38 @@ export class AthleteListService {
         'https://www.ag-grid.com/example-assets/olympic-winners.json'
       )
       .subscribe(response => {
-        const filter = response.filter(p => p.country === 'Brazil')
-        console.log(filter)
-        this.athletes.push(...filter)
+        //this.athletes.push(...response)
+        this.athletes.push(...response)
       })
   }
 
   getAthletes () {
     return this.athletes
+  }
+
+  addAthlete (
+    athlete: string,
+    age: number,
+    country: string,
+    year: number,
+    date: string,
+    sport: string,
+    gold: number,
+    silver: number,
+    bronze: number,
+    total: number
+  ) {
+    this.athletes.unshift({
+      athlete,
+      age,
+      country,
+      year,
+      date,
+      sport,
+      gold,
+      silver,
+      bronze,
+      total
+    })
   }
 }
